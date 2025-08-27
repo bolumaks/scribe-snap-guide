@@ -61,7 +61,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				/* Documentation specific colors */
+				'doc-bg': 'hsl(var(--doc-background))',
+				'doc-sidebar': 'hsl(var(--doc-sidebar))',
+				'doc-content': 'hsl(var(--doc-content))',
+				/* Hero colors */
+				'hero-primary': 'hsl(var(--hero-primary))',
+				'hero-secondary': 'hsl(var(--hero-secondary))',
+				/* Navigation colors */
+				'nav-active': 'hsl(var(--nav-active))',
+				'nav-hover': 'hsl(var(--nav-hover))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
