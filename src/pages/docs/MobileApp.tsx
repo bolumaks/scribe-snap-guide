@@ -1,7 +1,10 @@
 import { DocLayout } from "@/components/layout/DocLayout";
 import { MarkdownRenderer } from "@/components/markdown/MarkdownRenderer";
+import mobileAppMarkdown from "@/data/mobile-app.md";
+import { useMarkdown } from "@/hooks/use-markdown";
 
-const content = `# Prerequisites
+// This is a fallback content in case the markdown file fails to load
+const fallbackContent = `# Prerequisites
 
 Before installing NovelNest, make sure your system meets the following requirements for each component.
 
@@ -131,6 +134,9 @@ If you encounter any issues with the prerequisites, check our [Support](/docs/su
 `;
 
 export default function MobileApp() {
+  // Use the custom hook to load markdown content
+  const content = useMarkdown(mobileAppMarkdown, fallbackContent);
+
   return (
     <DocLayout>
       <div className="container mx-auto px-6 py-8 max-w-4xl">
