@@ -1,7 +1,7 @@
 import { DocLayout } from "@/components/layout/DocLayout";
 import { MarkdownRenderer } from "@/components/markdown/MarkdownRenderer";
 
-const prerequisitesContent = `# Prerequisites
+const content = `# Prerequisites
 
 Before installing NovelNest, make sure your system meets the following requirements for each component.
 
@@ -130,11 +130,11 @@ Once you've verified all prerequisites are met, proceed to the [Installation Gui
 If you encounter any issues with the prerequisites, check our [Support](/docs/support) section for troubleshooting help.
 `;
 
-export default function Prerequisites() {
+export default function MobileApp() {
   return (
     <DocLayout>
       <div className="container mx-auto px-6 py-8 max-w-4xl">
-        <MarkdownRenderer content={prerequisitesContent} />
+        <MarkdownRenderer content={content} />
       </div>
     </DocLayout>
   );

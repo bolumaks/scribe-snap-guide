@@ -3,11 +3,11 @@ import { MarkdownRenderer } from "@/components/markdown/MarkdownRenderer";
 
 const introductionContent = `# Introduction
 
-Welcome to the ScribeSnap documentation! This guide will help you set up and use ScribeSnap, a comprehensive documentation platform designed for modern applications.
+Welcome to the NovelNest documentation! This guide will help you set up and use NovelNest, a comprehensive documentation platform designed for modern applications.
 
-## What is ScribeSnap?
+## What is NovelNest?
 
-ScribeSnap is a powerful documentation platform that helps you organize and categorize content effectively. It includes:
+NovelNest is a powerful documentation platform that helps you organize and categorize content effectively. It includes:
 
 - **Admin Panel** - Comprehensive management interface with powerful features
 - **Mobile Application** - Native mobile app built with Flutter 
@@ -41,8 +41,7 @@ The documentation is organized into several sections:
 - **Modern Stack** - Built with the latest technologies
 
 ## System Requirements
-
-### For Web Application
+### For Admin Panel and Author Dashboard
 
 - **VPS Hosting**: A Virtual Private Server (VPS) is **mandatory** to ensure reliable performance and security. Shared hosting environments are not supported for this web application.
 
@@ -50,16 +49,18 @@ The documentation is organized into several sections:
 
 - **Memory Requirements**: The server should have at least **3-4 GB of free RAM** to handle the application's processes effectively.
 
-- **SSH Root Access**: The server must provide **SSH root access** to execute Node.js commands and manage the application.
+### For Admin Panel and Author Dashboard
 
-### For Admin Panel
+- **VPS Hosting**: A Virtual Private Server (VPS) is **mandatory** to ensure reliable performance and security. Shared hosting environments are not supported for this web application.
 
-- **PHP Version**: ScribeSnap Admin panel is built using **Laravel Framework 10.0** so you need PHP version **minimum 8.1.0 or higher version** installed on your server.
+- **Node.js Support**: The server must support **Node.js**, as it is essential for running the application.
+
+- **Memory Requirements**: The server should have at least **3-4 GB of free RAM** to handle the application's processes effectively.
 
 ### For Mobile App
 
-- **Flutter Version**: Flutter stable channel **3.24.2** sdk version
-- **Java Version**: JDK version **22**
+- **React Native Version**: React Native **0.79.4** version
+- **Expo SDK Version**: SDK version **53**
 
 > **Note**: A VPS server is only required if you plan to use the **web application**. For hosting the web app, a VPS server is mandatory to ensure proper functionality and performance. However, if you are only using the **mobile app** and the **admin panel**, you can opt for a **shared hosting service** as it is sufficient for these components.
 
@@ -72,7 +73,7 @@ Ready to get started? Here's what to do next:
 3. **Follow Installation Guide** - Use our step-by-step installation instructions
 4. **Explore Features** - Learn about all the powerful features available
 
-Thank you for choosing ScribeSnap!
+Thank you for choosing NovelNest!
 `;
 
 export default function Introduction() {
