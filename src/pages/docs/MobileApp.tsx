@@ -138,7 +138,7 @@ export default function MobileApp() {
   const content = useMarkdown(mobileAppMarkdown, fallbackContent);
 
   return (
-    <DocLayout>
+    <DocLayout markdownContent={content}>
       <div className="container mx-auto px-6 py-8 max-w-4xl">
         <MarkdownRenderer content={content} />
       </div>
