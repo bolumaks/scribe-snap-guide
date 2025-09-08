@@ -139,7 +139,7 @@ export default function MobileApp() {
 
   return (
     <DocLayout>
-      <div className="container mx-auto px-6 py-8 max-w-4xl">
+      <div className="container p-6">
         <MarkdownRenderer content={content} />
       </div>
     </DocLayout>

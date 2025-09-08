@@ -136,9 +136,7 @@ gluestack-ui.config.json # Gluestack UI theme
     Unzip the downloaded code. After unzipping you will have NovelNest - App Code zip folder. Unzip that folder, open in your preferred editor and run:
 
 ```bash
-
 npm install
-
 ```
 
 2.  **Configure Environment**
@@ -150,17 +148,13 @@ npm install
 Create an account on [Flutterwave](https://onboarding.flutterwave.com/signup) and get your public key.
 
 ```bash
-
 EXPO_PUBLIC_FLW_PUBLIC_KEY=your_flutterwave_key
-
 ```
 
 3.  **Run in Expo**
 
 ```bash
-
 npx expo start
-
 ```
 
 > ⚠️ For AdMob & Flutterwave SDK, use a **dev client**.
@@ -168,13 +162,11 @@ npx expo start
 4.  **Build Dev Client**
 
 ```bash
-
 eas login
 
 eas build --profile development --platform android
 
 npx expo start --dev-client
-
 ```
 
 Expo documentation [here](https://docs.expo.dev/get-started/introduction/). Development build documentation [here](https://docs.expo.dev/develop/development-builds/introduction/)
@@ -222,9 +214,7 @@ EXPO_PUBLIC_ADMOB_IOS_APP_ID=ca-app-pub-xxxxxxxx~zzzzzzzz
 ## 🧪 Testing
 
 ```bash
-
 npm  run  test
-
 ```
 
 Uses **Jest** + **React Testing Library**.
@@ -240,5 +230,3 @@ Uses **Jest** + **React Testing Library**.
 - Secure Flutterwave keys (server verification recommended)
 
 - Test on physical devices for WebView & Ads
-
----

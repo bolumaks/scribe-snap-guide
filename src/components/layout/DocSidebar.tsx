@@ -39,7 +39,7 @@ const navigationItems = [
     items: [
       { title: "Admin Panel", url: "/docs/admin-panel", icon: Settings },
       { title: "Mobile App", url: "/docs/mobile-app", icon: Smartphone },
-      { title: "Web Application", url: "/docs/web-app", icon: Globe },
+      { title: "Backend Application", url: "/docs/backend", icon: Globe },
     ],
   },
   {

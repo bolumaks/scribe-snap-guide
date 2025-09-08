@@ -9,6 +9,7 @@ import Introduction from "./pages/docs/Introduction";
 import Prerequisites from "./pages/docs/Prerequisites";
 import NotFound from "./pages/NotFound";
 import MobileApp from "./pages/docs/MobileApp";
+import Backend from "./pages/docs/Backend";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/docs/introduction" element={<Introduction />} />
           <Route path="/docs/prerequisites" element={<Prerequisites />} />
           <Route path="/docs/mobile-app" element={<MobileApp />} />
+          <Route path="/docs/backend" element={<Backend />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
