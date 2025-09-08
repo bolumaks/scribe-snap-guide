@@ -5,14 +5,13 @@ import { DocHeader } from "./DocHeader";
 
 interface DocLayoutProps {
   children: ReactNode;
-  markdownContent?: string;
 }
 
-export function DocLayout({ children, markdownContent }: DocLayoutProps) {
+export function DocLayout({ children }: DocLayoutProps) {
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full bg-doc-bg">
-        <DocSidebar markdownContent={markdownContent} />
+        <DocSidebar />
         <div className="flex-1 flex flex-col">
           <DocHeader />
           <main className="flex-1 bg-doc-content">

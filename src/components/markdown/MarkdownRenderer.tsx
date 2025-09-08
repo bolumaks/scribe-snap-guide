@@ -1,8 +1,8 @@
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
-import rehypeRaw from "rehype-raw";
-import "highlight.js/styles/github.css";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
+import rehypeRaw from 'rehype-raw';
+import 'highlight.js/styles/github-dark.css';
 
 interface MarkdownRendererProps {
   content: string;
@@ -16,36 +16,6 @@ export function MarkdownRenderer({ content, className }: MarkdownRendererProps) 
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight, rehypeRaw]}
         components={{
-          h1({ children, ...props }) {
-            const text = String(children);
-            const id = `heading-0-${text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
-            return <h1 id={id} {...props}>{children}</h1>;
-          },
-          h2({ children, ...props }) {
-            const text = String(children);
-            const id = `heading-1-${text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
-            return <h2 id={id} {...props}>{children}</h2>;
-          },
-          h3({ children, ...props }) {
-            const text = String(children);
-            const id = `heading-2-${text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
-            return <h3 id={id} {...props}>{children}</h3>;
-          },
-          h4({ children, ...props }) {
-            const text = String(children);
-            const id = `heading-3-${text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
-            return <h4 id={id} {...props}>{children}</h4>;
-          },
-          h5({ children, ...props }) {
-            const text = String(children);
-            const id = `heading-4-${text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
-            return <h5 id={id} {...props}>{children}</h5>;
-          },
-          h6({ children, ...props }) {
-            const text = String(children);
-            const id = `heading-5-${text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
-            return <h6 id={id} {...props}>{children}</h6>;
-          },
           img: ({ node, ...props }) => (
             <img 
               {...props} 
