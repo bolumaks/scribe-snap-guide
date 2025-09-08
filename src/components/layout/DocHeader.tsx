@@ -8,16 +8,14 @@ export function DocHeader() {
   return (
     <header className="h-14 flex items-center justify-between px-4 bg-sidebar border-b border-sidebar-border">
       <div className="flex items-center gap-4">
-        <SidebarTrigger className="text-sidebar-foreground hover:bg-sidebar-accent" />
+        <SidebarTrigger className="text-black hover:bg-sidebar-accent" />
         <Link to="/" className="flex items-center gap-2">
           <LogoIcon className="h-6 w-6" />
-          <span className="font-semibold text-sidebar-foreground">
-            NovelNest
-          </span>
+          <span className="font-semibold text-black">NovelNest</span>
         </Link>
       </div>
 
-      <div className="flex items-center gap-2">
+      {/* <div className="flex items-center gap-2">
         <Button
           variant="ghost"
           size="sm"
@@ -36,7 +34,7 @@ export function DocHeader() {
         >
           <Github className="h-4 w-4" />
         </Button>
-      </div>
+      </div> */}
     </header>
   );
 }

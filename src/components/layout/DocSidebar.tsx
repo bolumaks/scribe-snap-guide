@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { 
-  Book, 
-  Rocket, 
-  Settings, 
-  Smartphone, 
-  Globe, 
-  Sparkles, 
+import {
+  Book,
+  Rocket,
+  Settings,
+  Smartphone,
+  Globe,
+  Sparkles,
   FileText,
   ChevronRight,
-  Search
+  Search,
 } from "lucide-react";
 import {
   Sidebar,
@@ -32,7 +32,7 @@ const navigationItems = [
       { title: "Introduction", url: "/docs/introduction", icon: Book },
       { title: "Prerequisites", url: "/docs/prerequisites", icon: Settings },
       { title: "Installation", url: "/docs/installation", icon: Rocket },
-    ]
+    ],
   },
   {
     title: "Applications",
@@ -40,15 +40,15 @@ const navigationItems = [
       { title: "Admin Panel", url: "/docs/admin-panel", icon: Settings },
       { title: "Mobile App", url: "/docs/mobile-app", icon: Smartphone },
       { title: "Web Application", url: "/docs/web-app", icon: Globe },
-    ]
+    ],
   },
   {
     title: "Advanced",
     items: [
       { title: "Features", url: "/docs/features", icon: Sparkles },
       { title: "ChangeLog", url: "/docs/changelog", icon: FileText },
-    ]
-  }
+    ],
+  },
 ];
 
 export function DocSidebar() {
@@ -60,13 +60,15 @@ export function DocSidebar() {
   const collapsed = state === "collapsed";
 
   return (
-    <Sidebar className={cn(
-      "border-r border-sidebar-border",
-      collapsed ? "w-14" : "w-64"
-    )}>
+    <Sidebar
+      className={cn(
+        "border-r border-sidebar-border",
+        collapsed ? "w-14" : "w-64"
+      )}
+    >
       <SidebarContent className="bg-sidebar">
         {/* Search */}
-        {!collapsed && (
+        {/* {!collapsed && (
           <div className="p-4 border-b border-sidebar-border">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -79,14 +81,14 @@ export function DocSidebar() {
               />
             </div>
           </div>
-        )}
+        )} */}
 
         {/* Navigation */}
         <div className="flex-1 px-3">
           {navigationItems.map((section) => (
             <SidebarGroup key={section.title} className="py-2">
               {!collapsed && (
-                <SidebarGroupLabel className="text-sidebar-foreground/70 text-xs uppercase tracking-wide mb-2">
+                <SidebarGroupLabel className="text-black/70 text-xs uppercase tracking-wide mb-2">
                   {section.title}
                 </SidebarGroupLabel>
               )}
@@ -99,9 +101,10 @@ export function DocSidebar() {
                           to={item.url}
                           className={({ isActive: navIsActive }) =>
                             cn(
-                              "flex items-center gap-3 px-3 py-2 rounded-md transition-all duration-200",
-                              "hover:bg-sidebar-accent text-sidebar-foreground",
-                              navIsActive && "bg-sidebar-primary text-sidebar-primary-foreground font-medium"
+                              "flex items-center text-black gap-3 px-3 py-2 rounded-md transition-all duration-200",
+                              "hover:bg-[#e0e0e0]",
+
+                              navIsActive && "bg-[#e0e0e0] font-medium"
                             )
                           }
                         >

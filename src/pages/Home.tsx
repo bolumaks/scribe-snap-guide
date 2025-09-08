@@ -130,24 +130,21 @@ export default function Home() {
             {features.map((feature) => (
               <Card
                 key={feature.title}
-                className="bg-card border-border hover:border-primary/50 transition-all duration-300 group"
+                className="bg-card border-0 transition-all duration-300 group"
               >
                 <CardContent className="p-8">
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-6 p-4 bg-primary/10 rounded-full">
                       <feature.icon className={`h-8 w-8 ${feature.color}`} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-4 text-card-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-semibold mb-4 text-black group-hover:text-primary transition-colors">
                       {feature.title}
                     </h3>
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {feature.description}
                     </p>
                     <Link to={feature.link}>
-                      <Button
-                        variant="outline"
-                        className="group-hover:border-primary group-hover:text-primary transition-all"
-                      >
+                      <Button className=" transition-all">
                         {feature.title === "Admin Panel"
                           ? "Configure Admin Panel"
                           : feature.title === "Mobile Application"
@@ -167,9 +164,7 @@ export default function Home() {
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4 text-card-foreground">
-              Need Help?
-            </h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Need Help?</h2>
             <p className="text-muted-foreground mb-8 text-lg">
               Our support team is ready to assist you with any questions or
               issues.

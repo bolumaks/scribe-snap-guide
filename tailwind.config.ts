@@ -26,7 +26,7 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        background: "#F3F3F3",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#6457FB",
@@ -53,23 +53,24 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
+          DEFAULT: "#E7E7E7",
           foreground: "hsl(var(--card-foreground))",
         },
         sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
+          DEFAULT: "#F3F3F3",
           foreground: "hsl(var(--sidebar-foreground))",
           primary: "hsl(var(--sidebar-primary))",
           "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
           accent: "hsl(var(--sidebar-accent))",
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
+          border: "#c9c9c9",
+
           ring: "hsl(var(--sidebar-ring))",
         },
         /* Documentation specific colors */
-        "doc-bg": "hsl(var(--doc-background))",
-        "doc-sidebar": "hsl(var(--doc-sidebar))",
-        "doc-content": "hsl(var(--doc-content))",
+        "doc-bg": "#F3F3F3",
+        "doc-sidebar": "#F3F3F3",
+        "doc-content": "#fff",
         /* Hero colors */
         "hero-primary": "hsl(var(--hero-primary))",
         "hero-secondary": "hsl(var(--hero-secondary))",
