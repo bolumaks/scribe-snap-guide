@@ -1,134 +1,126 @@
 # NovelNest Frontend
 
-This is the web frontend for the NovelNest platform.  
-It is built with Next.js (TypeScript) and integrates with the NovelNest backend API to provide a responsive web experience for reading, browsing novels, user interaction, and admin tasks.  
+This is the web frontend for the NovelNest platform.
+
+It is built with React Vite (TypeScript) and integrates with the NovelNest backend API to provide a responsive web experience for author to write novels, manage content, monitor earnings and admin tasks.
 
 ---
 
 ## Features
 
-- Authentication
-  - User login & signup
-  - Admin login
-  - JWT-based session handling
-
-- User Dashboard
-  - Profile view and update
-  - Saved and reading lists
-  - Notifications
-
-- Novels
-  - Browse novels by genre or category
-  - View novel details (cover, likes, chapters, stats)
-  - Like, save, or add novels to reading list
-
-- Reading
-  - In-browser chapter reader
-  - Customizable reading settings (font, background, size)
-
-- Posts & Community
-  - View and create posts about novels
-  - Like and comment on posts
-  - Following feed and global feed
-
+- Author
+- Author Dashboard
+- Novels Management
+- Earnings
 - Admin
-  - Admin dashboard
-  - Vendor and payout management
-  - Analytics and stats
+
+- Admin dashboard
+
+- Author payout management
+
+- Analytics and stats
 
 ---
 
 ## Tech Stack
 
-- Framework: Next.js (App Router, TypeScript)
+- Framework: React Vite + React Router (TypeScript)
+
 - UI: Tailwind CSS
+
 - State Management: Zustand
+
 - Data Fetching: React Query + Axios
+
 - Authentication: JWT (via backend API)
+
 - Forms: React Hook Form + Zod validation
+
 - Notifications: Toasts
+
 - API Integration: REST API from NovelNest backend
-
----
-
-## Project Structure
-
-```
-app/
-  (routes and pages for Next.js)
-components/
-  (reusable UI components)
-lib/
-  (api helpers, auth, utils)
-store/
-  (zustand state management)
-styles/
-  (tailwind and global css)
-```
 
 ---
 
 ## Prerequisites
 
 - Node.js 18+
+
 - npm or yarn
+
 - NovelNest backend API running and accessible
+
 - Environment variables configured
 
 ---
 
 ## Getting Started
 
-1. Clone & Install
-   ```bash
-   git clone <repo>
-   cd bolumaks-novelnest-frontend
-   npm install
-   ```
+1. **Unzip & Install**
+   Unzip the downloaded code. After unzipping you will have NovelNest - Web Code zip folder. Unzip that folder, open in your preferred editor and run:
+
+```bash
+npm install
+or
+pnpm install
+```
 
 2. Setup Environment
-   - Copy `.env.example` → `.env.local`
-   - Fill values:
-     ```env
-     NEXT_PUBLIC_API_URL=http://localhost:8099/api
-     NEXT_PUBLIC_FLW_PUBLIC_KEY=your_flutterwave_public_key
-     NEXTAUTH_SECRET=your_nextauth_secret
-     NEXTAUTH_URL=http://localhost:3000
-     ```
 
-3. Run in Dev
-   ```bash
-   npm run dev
-   ```
+- Make sure your backend is running`.env.example` → `.env.local`
 
-   Starts app at http://localhost:3000
+- Fill values:
+
+```env
+
+VITE_BACKEND_URL=http://localhost:8099/api
+
+VITE_SECRET_KEY=your_nextauth_secret
+
+```
+
+3. **Create Admin Account**
+   Make sure your backend is running, then use any preferred API testing tool like Postman. Send a POST request to admin route to create an account like below:
+   ![Postman](https://raw.githubusercontent.com/bolumaks/scribe-snap-guide/refs/heads/main/public/postman.png)
+
+4. Run in Dev
+
+```bash
+
+npm run dev
+
+```
+
+Starts app at http://localhost:8080 or your configured port.
 
 4. Build & Run
-   ```bash
-   npm run build
-   npm start
-   ```
+
+```bash
+
+npm run build
+
+npm start
+
+```
+
+5. **Modify Admin Settings**
+   Visit admin settings tab to modify and adjust the values like below:
+   ![Admin settings](https://raw.githubusercontent.com/bolumaks/scribe-snap-guide/refs/heads/main/public/Screenshot%202025-09-09%20112830.png)
 
 ---
 
 ## Modifying the Project
 
-- Add new page/route: create a file under `app/` (Next.js App Router)
-- Update API calls: modify `lib/api.ts` or relevant service files
-- Update state: edit zustand stores under `store/`
-- Update styling: change `tailwind.config.js` or `styles/globals.css`
+- Add new page/route: create a file under `pages/`
+
+- Update API calls: modify `lib/controller.ts` or relevant service files
+
+- Update state: edit zustand stores under `lib/store`
+
+- Update styling: change `tailwind.config.js` or `index.css`
 
 ---
 
 ## Deployment Notes
 
-- Replace `NEXT_PUBLIC_API_URL` with production backend URL
-- Use real Flutterwave public key
-- Secure NextAuth secret
-- Ensure environment variables are configured on hosting platform (Vercel, etc.)
-
----
-
-## License
-
-MIT © Your Name
+- - Replace `VITE_BACKEND_URL` in env with production API url

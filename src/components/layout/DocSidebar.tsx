@@ -10,6 +10,10 @@ import {
   FileText,
   ChevronRight,
   Search,
+  Contact,
+  Contact2,
+  MessageCircleQuestion,
+  StarHalf,
 } from "lucide-react";
 import {
   Sidebar,
@@ -27,14 +31,6 @@ import { cn } from "@/lib/utils";
 
 const navigationItems = [
   {
-    title: "Getting Started",
-    items: [
-      { title: "Introduction", url: "/docs/introduction", icon: Book },
-      { title: "Prerequisites", url: "/docs/prerequisites", icon: Settings },
-      { title: "Installation", url: "/docs/installation", icon: Rocket },
-    ],
-  },
-  {
     title: "Applications",
     items: [
       { title: "Admin Panel", url: "/docs/admin-panel", icon: Settings },
@@ -47,6 +43,16 @@ const navigationItems = [
     items: [
       { title: "Features", url: "/docs/features", icon: Sparkles },
       { title: "ChangeLog", url: "/docs/changelog", icon: FileText },
+    ],
+  },
+  {
+    title: "Support",
+
+    items: [
+      { title: "Support", url: "/docs/support", icon: Contact },
+      { title: "FAQs", url: "/docs/faqs", icon: MessageCircleQuestion },
+      { title: "Rating", url: "/docs/rating", icon: StarHalf },
+      { title: "Contact", url: "/docs/contact", icon: Contact2 },
     ],
   },
 ];

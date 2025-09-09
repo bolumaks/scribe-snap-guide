@@ -10,6 +10,11 @@ import Prerequisites from "./pages/docs/Prerequisites";
 import NotFound from "./pages/NotFound";
 import MobileApp from "./pages/docs/MobileApp";
 import Backend from "./pages/docs/Backend";
+import AdminPanel from "./pages/docs/AdminPanel";
+import Support from "./pages/docs/Support";
+import FAQs from "./pages/docs/FAQs";
+import Rating from "./pages/docs/Rating";
+import Contact from "./pages/docs/Contact";
 
 const queryClient = new QueryClient();
 
@@ -21,10 +26,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/docs/introduction" element={<Introduction />} />
-          <Route path="/docs/prerequisites" element={<Prerequisites />} />
+          <Route path="/docs/support" element={<Support />} />
+          <Route path="/docs/faqs" element={<FAQs />} />
+          <Route path="/docs/rating" element={<Rating />} />
+          <Route path="/docs/contact" element={<Contact />} />
+          {/* <Route path="/docs/prerequisites" element={<Prerequisites />} /> */}
           <Route path="/docs/mobile-app" element={<MobileApp />} />
           <Route path="/docs/backend" element={<Backend />} />
+          <Route path="/docs/admin-panel" element={<AdminPanel />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
